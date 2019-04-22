@@ -9,12 +9,12 @@ from selenium import webdriver
 
 def init_browser():
     # had some trouble with Linux version, significant re-write from notebook file and cleanup
-    # executable_path = {"executable_path": "chromedriver"}
-    # return Browser("chrome", **executable_path, headless=False)
+    executable_path = {"executable_path": "chromedriver"}
+    return Browser("chrome", **executable_path, headless=False)
 
-    executable_path = {'executable_path': '/usr/bin/chromedriver'}
-    browser = Browser('chrome', **executable_path, headless=False)
-    time.sleep(3)
+    # executable_path = {'executable_path': '/usr/bin/chromedriver'}
+    # browser = Browser('chrome', **executable_path, headless=False)
+    # time.sleep(3)
 
 def scrape():
     browser = init_browser()
